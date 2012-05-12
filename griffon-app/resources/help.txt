@@ -1,0 +1,68 @@
+Available variables in DSL:
+
+    String script
+        content of the script-area
+
+    canvas
+        the canvas to paint at
+
+    width
+        the width of the canvas
+
+    height
+        the height of the canvas
+
+Available properties in canvas:
+
+    Paint color (read/write)
+        Foreground color to paint with
+
+    Paint background (read/write)
+        Background color to clear with
+
+    Stroke stroke (read/write)
+        Stroke to paint with
+
+    Point2D.Double pos (read-only)
+        Current location
+
+    double angle (read-only)
+        Current angle in degree
+
+    double angleRad (read-only)
+        Current angle in radians
+
+Available methods in canvas:
+
+    void moveTo(Point2D p)
+        set the current location to the given position
+
+    void turn(double degree)
+        turn the draw-direction around the current location by the given angle in degree
+
+    void turnRad(double radians)
+        turn the draw-direction around the current location by the given angle in radians
+
+    void setAngle(double degree)
+        set the draw-direction based on the current location by the given angle in degree
+
+    void setAngleRad(double radians)
+        set the draw-direction based on the current location by the given angle in radians
+
+    void lineTo(Point2D p)
+        Draw a straight line to the given position
+
+    void curveTo(Point2D end, Point2D ctrl1, Point2D ctrl2)
+        Draw a cubic curve with two control-points to the given position
+
+    void quadCurveTo(Point2D end, Point2D ctrl)
+        Draw a quadratic curve with one control-point to the given position
+
+    void horizontalLine(double x)
+        Draw a straight horizontal line to the given x-position
+
+    void verticalLine(double y)
+        Draw a straight vertical line to the given y-position
+
+    void clear()
+        Fill the canvas with the given background color
